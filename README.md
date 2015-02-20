@@ -3,4 +3,18 @@
 Run the script from the folder you have your 'UCI HAR Dataset' folder in.
 The script uses the dplyr library.
 
-It reads all data files into separate variables then binds the test and training sets together, adding label and subject columns (we have two databases at this point).Measures get filtered to eliminate values that are outside the standard deviation. The script then names the columns and merges the data sets with row binding and the result is converted into a data frame tbl.
+It reads all data files into separate variables then binds them all together
+into one big dataset. Then the columns get labelled properly and the dataset
+gets narrowed down based on the column names (the ones containing mean() or
+std() are the ones we need for the final dataset).
+
+Then the script changes the activities from number values to strings.
+    1 WALKING
+    2 WALKING_UPSTAIRS
+    3 WALKING_DOWNSTAIRS
+    4 SITTING
+    5 STANDING
+    6 LAYING
+    
+In the last step a new dataset gets the means of the measurements for all
+activities and subjects separately.
