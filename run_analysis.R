@@ -35,4 +35,5 @@ data2<-rbind(aggregate(data2[, 3:68], list(data2$Activity), mean),
             aggregate(data2[, 3:68], list(as.character(data2$Subject)), mean))
 
 #cleanup (getting rid of temporary stuff)
-remove(activityLabels,features,testm,tests,testx,testy,trainm,trains,trainx,trainy)
+remove(activityLabels,features,testm,tests,testx,testy,
+       trainm,trains,trainx,trainy,data)

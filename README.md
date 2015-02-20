@@ -17,4 +17,4 @@ Then the script changes the activities from number values to strings.
     6 LAYING
     
 In the last step a new dataset gets the means of the measurements for all
-activities and subjects separately.
+activities and subjects separately. That is data2.
